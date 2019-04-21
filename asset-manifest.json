@@ -1,11 +1,11 @@
 {
-  "main.js": "/static/js/main.f71b0f00.chunk.js",
-  "main.js.map": "/static/js/main.f71b0f00.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-  "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-  "static/js/2.f85f44bb.chunk.js": "/static/js/2.f85f44bb.chunk.js",
-  "static/js/2.f85f44bb.chunk.js.map": "/static/js/2.f85f44bb.chunk.js.map",
-  "index.html": "/index.html",
-  "precache-manifest.d127b38086c5240bcd4427b43a6fb9ce.js": "/precache-manifest.d127b38086c5240bcd4427b43a6fb9ce.js",
-  "service-worker.js": "/service-worker.js"
+  "main.js": "/ekki_web_client/static/js/main.f71b0f00.chunk.js",
+  "main.js.map": "/ekki_web_client/static/js/main.f71b0f00.chunk.js.map",
+  "runtime~main.js": "/ekki_web_client/static/js/runtime~main.3c0f1d3f.js",
+  "runtime~main.js.map": "/ekki_web_client/static/js/runtime~main.3c0f1d3f.js.map",
+  "static/js/2.f85f44bb.chunk.js": "/ekki_web_client/static/js/2.f85f44bb.chunk.js",
+  "static/js/2.f85f44bb.chunk.js.map": "/ekki_web_client/static/js/2.f85f44bb.chunk.js.map",
+  "index.html": "/ekki_web_client/index.html",
+  "precache-manifest.c62c38672ff35f1d2206039ce0dd26bc.js": "/ekki_web_client/precache-manifest.c62c38672ff35f1d2206039ce0dd26bc.js",
+  "service-worker.js": "/ekki_web_client/service-worker.js"
 }
