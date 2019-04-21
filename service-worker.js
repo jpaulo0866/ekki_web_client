@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/ekki_web_client/precache-manifest.1ef2f80ad2371a09e37e450d46cc1e85.js"
+  "/ekki_web_client/precache-manifest.a3c15f51edbcc38941a0c8cd70ef1374.js"
 );
 
 workbox.clientsClaim();
