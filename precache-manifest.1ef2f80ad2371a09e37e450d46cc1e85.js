@@ -4,15 +4,15 @@ self.__precacheManifest = [
     "url": "/ekki_web_client/static/js/runtime~main.3c0f1d3f.js"
   },
   {
-    "revision": "04353e10be86f4b3ee1e",
-    "url": "/ekki_web_client/static/js/main.f71b0f00.chunk.js"
+    "revision": "44b7dacd79a1feb93905",
+    "url": "/ekki_web_client/static/js/main.a8b1a66a.chunk.js"
   },
   {
     "revision": "dc52af9b1f121b944d21",
     "url": "/ekki_web_client/static/js/2.f85f44bb.chunk.js"
   },
   {
-    "revision": "5e934bdcf3216fc162b0df6f63504511",
+    "revision": "0c34216078dff80f91de002a167cff90",
     "url": "/ekki_web_client/index.html"
   }
 ];

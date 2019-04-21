@@ -1,11 +1,11 @@
 {
-  "main.js": "/ekki_web_client/static/js/main.f71b0f00.chunk.js",
-  "main.js.map": "/ekki_web_client/static/js/main.f71b0f00.chunk.js.map",
+  "main.js": "/ekki_web_client/static/js/main.a8b1a66a.chunk.js",
+  "main.js.map": "/ekki_web_client/static/js/main.a8b1a66a.chunk.js.map",
   "runtime~main.js": "/ekki_web_client/static/js/runtime~main.3c0f1d3f.js",
   "runtime~main.js.map": "/ekki_web_client/static/js/runtime~main.3c0f1d3f.js.map",
   "static/js/2.f85f44bb.chunk.js": "/ekki_web_client/static/js/2.f85f44bb.chunk.js",
   "static/js/2.f85f44bb.chunk.js.map": "/ekki_web_client/static/js/2.f85f44bb.chunk.js.map",
   "index.html": "/ekki_web_client/index.html",
-  "precache-manifest.c62c38672ff35f1d2206039ce0dd26bc.js": "/ekki_web_client/precache-manifest.c62c38672ff35f1d2206039ce0dd26bc.js",
+  "precache-manifest.1ef2f80ad2371a09e37e450d46cc1e85.js": "/ekki_web_client/precache-manifest.1ef2f80ad2371a09e37e450d46cc1e85.js",
   "service-worker.js": "/ekki_web_client/service-worker.js"
 }
