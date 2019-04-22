@@ -22,16 +22,21 @@ import moment from 'moment';
 
 const styles = theme => ({
   root: {
-    width: '100%',
+    display: 'flex',
+    marginTop: theme.spacing.unit * 3,
     overflowX: 'auto',
   },
   table: {
-    minWidth: 700,
+    minWidth: 275,
+  },
+  tableCell: {
+    paddingRight: 3,
+    paddingLeft: 4
   },
   card: {
     minWidth: 275,
-    margin: '10px'
-  }
+    margin: '10px',
+  },
 });
 
 class Transfers extends React.Component {
@@ -122,6 +127,7 @@ class Transfers extends React.Component {
 
     return (
       <main>
+      <div>
         <AlertDialog open={this.state.alertOpen}
           title={this.state.title}
           message={this.state.message}
@@ -140,35 +146,34 @@ class Transfers extends React.Component {
             <Typography variant="h4" gutterBottom component="h2">
               Minhas Transferências
           </Typography>
-            <div>
+            
               <Paper className={classes.root}>
                 <Table className={classes.table}>
                   <TableHead>
                     <TableRow>
-                      <TableCell>Data da Transferência</TableCell>
-                      <TableCell>Favorecido</TableCell>
-                      <TableCell>Identificação</TableCell>
-                      <TableCell>Valor</TableCell>
-                      <TableCell>Status</TableCell>
-                      <TableCell>Ações</TableCell>
+                      <TableCell className={classes.tableCell}>Data da Transferência</TableCell>
+                      <TableCell className={classes.tableCell}>Favorecido</TableCell>
+                      <TableCell className={classes.tableCell}>Identificação</TableCell>
+                      <TableCell className={classes.tableCell}>Valor</TableCell>
+                      <TableCell className={classes.tableCell}>Status</TableCell>
+                      <TableCell className={classes.tableCell}>Ações</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
                     {this.state.data.map(n => (
                       <TableRow key={n._id}>
-                        <TableCell>{moment(n.created).format('DD/MM/YYYY hh:mm:ss')}</TableCell>
-                        <TableCell>{n.favored.name}</TableCell>
-                        <TableCell>{n.identification}</TableCell>
-                        <TableCell>{`R$ ${n.value.toLocaleString(undefined, { minimumFractionDigits: 2 })}`}</TableCell>
-                        <TableCell>{n.status}</TableCell>
-                        <TableCell>
+                        <TableCell className={classes.tableCell}>{moment(n.created).format('DD/MM/YYYY hh:mm:ss')}</TableCell>
+                        <TableCell className={classes.tableCell}>{n.favored.name}</TableCell>
+                        <TableCell className={classes.tableCell}>{n.identification}</TableCell>
+                        <TableCell className={classes.tableCell}>{`R$ ${n.value.toLocaleString(undefined, { minimumFractionDigits: 2 })}`}</TableCell>
+                        <TableCell className={classes.tableCell}>{n.status}</TableCell>
+                        <TableCell className={classes.tableCell}>
                           <Button variant="contained" type="button" color="default" value={n._id} onClick={this.detailTransfer}>Detalhes</Button>
                         </TableCell>
                       </TableRow>
                     ))}
                   </TableBody>
-                </Table>
-                <TableFooter>
+                  <TableFooter>
                   <TableRow>
                     <TablePagination
                       rowsPerPageOptions={[5, 10, 25]}
@@ -182,12 +187,17 @@ class Transfers extends React.Component {
                     />
                   </TableRow>
                 </TableFooter>
+              </Table>
+                
               </Paper>
-            </div>
+            
           </CardContent>
         </Card>
-        <WeekTransfers />
-      </main>
+        <div>
+          <WeekTransfers />
+        </div>
+        </div>
+        </main>
     );
   }
 }

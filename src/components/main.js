@@ -26,6 +26,14 @@ const styles = theme => ({
   },
   drawer: {
     [theme.breakpoints.up('sm')]: {
+      width: 0,
+      flexShrink: 0,
+    },
+    [theme.breakpoints.up('md')]: {
+      width: 0,
+      flexShrink: 0,
+    },
+    [theme.breakpoints.up('lg')]: {
       width: drawerWidth,
       flexShrink: 0,
     },
@@ -35,7 +43,7 @@ const styles = theme => ({
   },
   menuButton: {
     marginRight: 20,
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('lg')]: {
       display: 'none',
     },
   },
@@ -45,7 +53,10 @@ const styles = theme => ({
   },
   content: {
     flexGrow: 1,
-    padding: theme.spacing.unit * 3,
+    padding: theme.spacing.unit * 2,
+    [theme.breakpoints.down('sm')]: {
+      padding: 0,
+    },
   },
 });
 
@@ -102,8 +113,8 @@ class Main extends React.Component {
               anchor={theme.direction === 'rtl' ? 'right' : 'left'}
               open={this.state.mobileOpen}
               onClose={this.handleDrawerToggle}
-              onClick={this.handleDrawerToggle}
-              onOpen={() => {}}
+              onOpen={this.handleDrawerToggle}
+              onClick={this.handleDrawerToggle}              
               classes={{
                 paper: classes.drawerPaper,
               }}
@@ -111,7 +122,7 @@ class Main extends React.Component {
               <List>{mainListItems}</List>
             </SwipeableDrawer>
           </Hidden>
-          <Hidden xsDown implementation="css">
+          <Hidden mdDown implementation="css">
             <Drawer
               classes={{
                 paper: classes.drawerPaper,

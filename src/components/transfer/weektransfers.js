@@ -17,10 +17,6 @@ import api from '../../services/api.interceptor';
 
 
 const styles = theme => ({
-  root: {
-    width: '100%',
-    overflowX: 'auto',
-  },
   card: {
     minWidth: 275,
     margin: '10px'

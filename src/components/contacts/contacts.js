@@ -27,11 +27,16 @@ import moment from 'moment';
 
 const styles = theme => ({
   root: {
-    width: '100%',
+    display: 'flex',
+    marginTop: theme.spacing.unit * 3,
     overflowX: 'auto',
   },
   table: {
-    minWidth: 700,
+    minWidth: 275,
+  },
+  tableCell: {
+    paddingRight: 3,
+    paddingLeft: 4
   },
   card: {
     minWidth: 275,
@@ -147,7 +152,7 @@ class Contacts extends React.Component {
 
         <Card className={classes.card}>
           <CardContent>
-            <Typography style={{ marginTop: '10px' }} variant="h4" gutterBottom component="h2">
+            <Typography variant="h4" gutterBottom component="h2">
               Contatos e Favorecidos
             </Typography>
             <Avatar>
@@ -163,24 +168,23 @@ class Contacts extends React.Component {
               selectedId={this.state.selectedId}
               onClose={this.handleModalClose} />
 
-            <div style={{ marginTop: '10px' }}>
               <Paper className={classes.root}>
                 <Table className={classes.table}>
                   <TableHead>
                     <TableRow>
-                      <TableCell>Nome</TableCell>
-                      <TableCell>Data de Cadastro</TableCell>
-                      <TableCell>Banco</TableCell>
-                      <TableCell>Ações</TableCell>
+                      <TableCell className={classes.tableCell}>Nome</TableCell>
+                      <TableCell className={classes.tableCell}>Data de Cadastro</TableCell>
+                      <TableCell className={classes.tableCell}>Banco</TableCell>
+                      <TableCell className={classes.tableCell}>Ações</TableCell>
                     </TableRow>
                   </TableHead>
                   <TableBody>
                     {this.state.data.map(n => (
                       <TableRow key={n._id} value={n}>
-                        <TableCell>{n.name}</TableCell>
-                        <TableCell>{moment(n.created).format('DD/MM/YYYY hh:mm:ss')}</TableCell>
-                        <TableCell>{n.bank}</TableCell>
-                        <TableCell>
+                        <TableCell className={classes.tableCell}>{n.name}</TableCell>
+                        <TableCell className={classes.tableCell}>{moment(n.created).format('DD/MM/YYYY hh:mm:ss')}</TableCell>
+                        <TableCell className={classes.tableCell}>{n.bank}</TableCell>
+                        <TableCell className={classes.tableCell}>
                           <div style={{display: 'flex'}}>
                               <Avatar style={{margin: '2px'}}>
                                 <Tooltip title="Editar" TransitionComponent={Grow}>
@@ -205,7 +209,7 @@ class Contacts extends React.Component {
                     <TableRow>
                       <TablePagination
                         rowsPerPageOptions={[5, 10, 25]}
-                        colSpan={5}
+                        colSpan={3}
                         count={this.state.totalElements}
                         rowsPerPage={this.state.rowsPerPage}
                         page={this.state.page}
@@ -217,7 +221,6 @@ class Contacts extends React.Component {
                   </TableFooter>
                 </Table>
               </Paper>
-            </div>
           </CardContent>
         </Card>
       </main>

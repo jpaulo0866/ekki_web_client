@@ -26,11 +26,16 @@ import api from '../../services/api.interceptor';
 
 const styles = theme => ({
   root: {
-    width: '100%',
+    display: 'flex',
+    marginTop: theme.spacing.unit * 3,
     overflowX: 'auto',
   },
   table: {
-    minWidth: 700,
+    minWidth: 275,
+  },
+  tableCell: {
+    paddingRight: 3,
+    paddingLeft: 4
   },
   card: {
     minWidth: 275,
@@ -160,26 +165,25 @@ class CreditCard extends React.Component {
               open={this.state.open}
               selectedId={this.state.selectedId}
               onClose={this.handleModalClose} />
-          <div style={{marginTop: '10px'}}>
             <Paper className={classes.root}>
                 <Table className={classes.table}>
                     <TableHead>
                     <TableRow>
-                        <TableCell>Apelido</TableCell>
-                        <TableCell>Número</TableCell>
-                        <TableCell>Proprietário</TableCell>
-                        <TableCell>Validade</TableCell>
-                        <TableCell>Ações</TableCell>
+                        <TableCell className={classes.tableCell}>Apelido</TableCell>
+                        <TableCell className={classes.tableCell}>Número</TableCell>
+                        <TableCell className={classes.tableCell}>Proprietário</TableCell>
+                        <TableCell className={classes.tableCell}>Validade</TableCell>
+                        <TableCell className={classes.tableCell}>Ações</TableCell>
                     </TableRow>
                     </TableHead>
                     <TableBody>
                     {this.state.data.map(n => (
                         <TableRow key={n._id}>
-                        <TableCell>{n.name}</TableCell>
-                        <TableCell>{n.number}</TableCell>
-                        <TableCell>{n.owner}</TableCell>
-                        <TableCell>{n.validThru}</TableCell>
-                        <TableCell>
+                        <TableCell className={classes.tableCell}>{n.name}</TableCell>
+                        <TableCell className={classes.tableCell}>{n.number}</TableCell>
+                        <TableCell className={classes.tableCell}>{n.owner}</TableCell>
+                        <TableCell className={classes.tableCell}>{n.validThru}</TableCell>
+                        <TableCell className={classes.tableCell}>
                           <div style={{display: 'flex'}}>
                             <Avatar style={{margin: '2px'}}>
                               <Tooltip title="Editar" TransitionComponent={Grow}>
@@ -216,7 +220,6 @@ class CreditCard extends React.Component {
                     </TableFooter>
                 </Table>
             </Paper>
-          </div>
           </CardContent>
           </Card>
       </main>
