@@ -187,7 +187,9 @@ class ContactModal extends React.Component {
               variant="outlined"
               style={{ width: '100%' }}
             />
+            
             <Button disabled={!this.formValid()} variant="contained" type="button" color="primary" onClick={this.save}>Salvar</Button>
+            <Button variant="contained" type="button" color="default" onClick={this.handleClose}>Fechar</Button>
           </div>
         </DialogContent>
       </Dialog>
