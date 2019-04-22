@@ -15,7 +15,6 @@ api.interceptors.request.use(async config => {
 });
 
 api.interceptors.response.use(async (response) => {
-    console.log(response);
     if (response.status === 401
         || response.status === 403) {
             logout();
@@ -23,7 +22,6 @@ api.interceptors.response.use(async (response) => {
     return response;
   }, 
   (error) => {
-    console.log(error);
     
     if (error.toString().includes('status code 401')) {
         logout();

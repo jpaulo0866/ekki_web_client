@@ -24,6 +24,11 @@ const styles = theme => ({
     top: '50%',
     transform: 'translate(-50%, -50%)',
     [theme.breakpoints.up(400 + theme.spacing.unit * 3 * 2)]: {
+      width: '50%',
+      marginLeft: 'auto',
+      marginRight: 'auto'
+    },
+    [theme.breakpoints.up(800 + theme.spacing.unit * 3 * 2)]: {
       width: '20%',
       marginLeft: 'auto',
       marginRight: 'auto'

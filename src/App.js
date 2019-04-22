@@ -20,8 +20,8 @@ class App extends Component {
           main: '#D80032'
         },
         error: yellow,
-        contrastThreshold: 5,
-        tonalOffset: 10,
+        contrastThreshold: 3,
+        tonalOffset: 0.2,
         type: "light",
         // background: {
         //   default: '#EDF2F4',          
@@ -43,7 +43,6 @@ class App extends Component {
         <div>
           <BrowserRouter>
           <Main />
-          
           </BrowserRouter>
         </div>
       ) : (
